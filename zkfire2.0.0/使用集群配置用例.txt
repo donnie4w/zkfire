@@ -1,0 +1,68 @@
+3台openfire服务器部署集群
+   ip分别为: 10.10.152.180、10.10.152.185、10.10.152.189
+   3台机器的一样的操作。不同的只是cluster.xml中的配置：
+
+   (1) 10.10.152.180  conf/cluster.xml
+        <?xml version="1.0" encoding="UTF-8"?>
+          <jive>
+	     <notice>10.10.152.180:3004</notice>
+	    <zoo>
+		   <tickTime>2000</tickTime>
+		   <initLimit>10</initLimit>
+		   <syncLimit>5</syncLimit>
+		   <dataDir>/data/zoo/data</dataDir>
+		   <clientPort>3181</clientPort>
+		   <autopurge.purgeInterval>1</autopurge.purgeInterval>
+		   <autopurge.snapRetainCount>30</autopurge.snapRetainCount>
+		   <server name="server.1">10.10.152.180:2888:3888</server>
+                   <server name="server.2">10.10.152.185:2888:3888</server>
+                   <server name="server.3">10.10.152.189:2888:3888</server>
+	   	   <myid>1</myid>
+	    </zoo>
+            <zClient>127.0.0.1:3181</zClient>
+	  </jive>
+
+   (2) 10.10.152.185  conf/cluster.xml
+         <?xml version="1.0" encoding="UTF-8"?>
+           <jive>
+	     <notice>10.10.152.185:3004</notice>
+	    <zoo>
+		   <tickTime>2000</tickTime>
+		   <initLimit>10</initLimit>
+		   <syncLimit>5</syncLimit>
+		   <dataDir>/data/zoo/data</dataDir>
+		   <clientPort>3181</clientPort>
+  		   <autopurge.purgeInterval>1</autopurge.purgeInterval>
+		   <autopurge.snapRetainCount>30</autopurge.snapRetainCount>
+		   <server name="server.1">10.10.152.180:2888:3888</server>
+                   <server name="server.2">10.10.152.185:2888:3888</server>
+                   <server name="server.3">10.10.152.189:2888:3888</server>
+	     	   <myid>2</myid>
+	    </zoo>
+            <zClient>127.0.0.1:3181</zClient>
+	  </jive>	 
+
+   (3) 10.10.152.189   conf/cluster.xml
+         <?xml version="1.0" encoding="UTF-8"?>
+          <jive>
+	     <notice>10.10.152.189:3004</notice>
+	     <zoo>
+		   <tickTime>2000</tickTime>
+		   <initLimit>10</initLimit>
+		   <syncLimit>5</syncLimit>
+		   <dataDir>/data/zoo/data</dataDir>
+		   <clientPort>3181</clientPort>
+		   <autopurge.purgeInterval>1</autopurge.purgeInterval>
+		   <autopurge.snapRetainCount>30</autopurge.snapRetainCount>
+		   <server name="server.1">10.10.152.180:2888:3888</server>
+                   <server name="server.2">10.10.152.185:2888:3888</server>
+                   <server name="server.3">10.10.152.189:2888:3888</server>
+	   	   <myid>3</myid>
+	     </zoo>
+             <zClient>127.0.0.1:3181</zClient>
+	  </jive>		 
+	  
+有任何问题或建议欢迎随时email给我donnie4w@gmail.com，谢谢!
+	   
+ 
+   
