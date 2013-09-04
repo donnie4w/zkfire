@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jive>
+	<notice>10.10.152.180:3004</notice>
+	<zoo>
+		<tickTime>2000</tickTime>
+		<initLimit>10</initLimit>
+		<syncLimit>5</syncLimit>
+		<dataDir>E:/zoo/data</dataDir>
+		<clientPort>3181</clientPort>
+		<server name="server.1">10.10.152.180:2888:3888</server>
+    <server name="server.2">10.10.152.185:2888:3888</server>
+    <server name="server.3">10.10.152.189:2888:3888</server>
+		<myid>1</myid>
+		<!-- ########## -->
+		<globalOutstandingLimit>1000</globalOutstandingLimit>
+	</zoo>
+	 <!--
+	   <zClient>127.0.0.1:3181</zClient>
+	   -->
+</jive>
