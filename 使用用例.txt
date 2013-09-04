@@ -1,9 +1,9 @@
-3Ì¨openfire·şÎñÆ÷¼¯Èº
-   ip·Ö±ğÎª: 10.10.152.180¡¢10.10.152.185¡¢10.10.152.189
-   http://www.igniterealtime.org/downloads/index.jsp ÏÂÔØ openfireÏàÓ¦Æ½Ì¨µÄ°æ±¾¡£²¢·Ö±ğÔÚ3Ì¨»úÆ÷ÉÏ½øĞĞ°²×°¡£
-   ½«zkfire.jar  Ìæ»»  openfire/lib/ ÏÂopenfire.jar °ü¡£
-   ½«cluster.xml ·ÅÔÚ  openfire/bin/ ÏÂ¡£
-   3Ì¨»úÆ÷µÄÒ»ÑùµÄ²Ù×÷¡£²»Í¬µÄÖ»ÊÇclusterÖĞµÄÅäÖÃ£º
+ï»¿3å°openfireæœåŠ¡å™¨é›†ç¾¤
+   ipåˆ†åˆ«ä¸º: 10.10.152.180ã€10.10.152.185ã€10.10.152.189
+   http://www.igniterealtime.org/downloads/index.jsp ä¸‹è½½ openfireç›¸åº”å¹³å°çš„ç‰ˆæœ¬ã€‚å¹¶åˆ†åˆ«åœ¨3å°æœºå™¨ä¸Šè¿›è¡Œå®‰è£…ã€‚
+   å°†zkfire.jar  æ›¿æ¢  openfire/lib/ ä¸‹openfire.jar åŒ…ã€‚
+   å°†cluster.xml æ”¾åœ¨  openfire/bin/ ä¸‹ã€‚
+   3å°æœºå™¨çš„ä¸€æ ·çš„æ“ä½œã€‚ä¸åŒçš„åªæ˜¯clusterä¸­çš„é…ç½®ï¼š
    (1) 10.10.152.180
     <?xml version="1.0" encoding="UTF-8"?>
     <jive>
